@@ -1,6 +1,6 @@
 import { WeatherResponse } from "models";
 import { call, put, takeLatest } from "redux-saga/effects";
-import { searchLocationsRequest } from "services";
+import { searchLocationsRequest } from "../../services/homePage.service";
 
 // Import all actions
 import {

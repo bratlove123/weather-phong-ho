@@ -1,9 +1,14 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import App from "./App";
+import { shallow, mount } from "enzyme";
+import { HomePage } from "pages/home-page/homePage";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("renders the component", () => {
+  const component = shallow(<App />);
+  expect(component).toMatchSnapshot();
+});
+
+test("has homepage element", () => {
+  const component = shallow(<App />);
+  expect(component).toContain(<HomePage />);
 });

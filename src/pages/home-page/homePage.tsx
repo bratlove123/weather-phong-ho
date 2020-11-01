@@ -23,6 +23,7 @@ export const HomePage = () => {
         <div className="search">
           <SearchInput
             placeholder="Type a city. Ex: London"
+            saving={isLoading}
             onSubmitSearch={(val: string) => {
               dispatch({ type: SEARCH_LOCATIONS, payload: val });
             }}

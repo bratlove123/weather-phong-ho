@@ -1,14 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import styles from "./searchInput.module.scss";
 
 export const SearchInput = ({
   placeholder,
   onSubmitSearch,
+  saving,
 }: {
   placeholder: string;
   onSubmitSearch: Function;
+  saving: boolean;
 }) => {
   const [value, setValue] = useState("");
 
@@ -37,7 +39,11 @@ export const SearchInput = ({
           }
         }}
       >
-        <FontAwesomeIcon icon={faSearch} />
+        {saving ? (
+          <FontAwesomeIcon icon={faCircleNotch} className="fa-spin" />
+        ) : (
+          <FontAwesomeIcon icon={faSearch} />
+        )}
       </button>
     </div>
   );
