@@ -1,0 +1,35 @@
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+
+  .search-container {
+    padding: 20px;
+    display: flex;
+
+    .search {
+      margin: auto;
+    }
+  }
+
+  .weather-container {
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    color: #407294;
+    font-family: monospace;
+  }
+
+  .error {
+    font-size: 25px;
+    color: #e64857;
+    margin: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+  }
+}
