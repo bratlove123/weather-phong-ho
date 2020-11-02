@@ -1,5 +1,7 @@
 import { WeatherByDate } from "models";
+import { RootState } from "models/states/root-state";
 import React from "react";
+import { useSelector } from "react-redux";
 import "./dateWeather.scss";
 
 const days = [
@@ -41,6 +43,8 @@ const colorBaseOnTemp = (temp: number) => {
   return `linear-gradient(to bottom, ${hexfrom}, ${hexto})`;
 };
 
+const searchStr = (state: RootState) => state.homePage.cityId;
+
 export const DateWeather = ({
   dateWeather,
 }: {
@@ -54,11 +58,12 @@ export const DateWeather = ({
   const tempMin = tempMax - 8;
   const color = colorBaseOnTemp(temp);
   const weather = dateWeather?.weather?.[0]?.icon;
+  const search = useSelector(searchStr);
 
   return (
     <div
       onClick={() => {
-        window.open("https://openweathermap.org/city/london");
+        window.open(`https://openweathermap.org/city/${search}`);
       }}
       className="date-container"
       style={{ backgroundImage: color }}

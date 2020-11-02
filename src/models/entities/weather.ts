@@ -2,6 +2,11 @@ export interface WeatherResponse {
   cod: string;
   message: string;
   list: WeatherByDate[];
+  city: City;
+}
+
+export interface City {
+  id: number;
 }
 
 export interface WeatherByDate {

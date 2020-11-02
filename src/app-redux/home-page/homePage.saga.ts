@@ -1,28 +1,25 @@
 import { WeatherResponse } from "models";
 import { call, put, takeLatest } from "redux-saga/effects";
-import { searchLocationsRequest } from "../../services/homePage.service";
+import { api } from "../../services/homePage.service";
 
 // Import all actions
 import {
-  SET_LOADING,
   SearchLocations,
   SEARCH_LOCATIONS,
   GET_SEARCH_LOCATIONS_SUCCESS,
   GET_SEARCH_LOCATIONS_ERROR,
 } from "./homePage.action";
 
-function* searchLocations(action: SearchLocations) {
-  yield put({ type: SET_LOADING, payload: true });
-
+export function* searchLocations(action: SearchLocations) {
   const locationsResponse: WeatherResponse = yield call(
-    searchLocationsRequest,
+    api.searchLocationsRequest,
     action.payload
   );
 
   if (locationsResponse && locationsResponse.cod === "200") {
     yield put({
       type: GET_SEARCH_LOCATIONS_SUCCESS,
-      payload: locationsResponse.list,
+      payload: locationsResponse,
     });
   } else {
     yield put({

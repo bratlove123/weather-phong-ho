@@ -22,7 +22,7 @@ export const HomePage = () => {
       <div className="search-container">
         <div className="search">
           <SearchInput
-            placeholder="Type a city. Ex: London"
+            placeholder="Type a city. Example: London"
             saving={isLoading}
             onSubmitSearch={(val: string) => {
               dispatch({ type: SEARCH_LOCATIONS, payload: val });
@@ -30,11 +30,11 @@ export const HomePage = () => {
           ></SearchInput>
         </div>
       </div>
-
+      <div>hihi</div>
       <div className="weather-container">
         {isLoading && <Loading />}
         {errorMessage !== "" && (
-          <div className="error">Opps!! {errorMessage}</div>
+          <div className="error">Opps! {errorMessage}</div>
         )}
         <DatesWeather></DatesWeather>
       </div>

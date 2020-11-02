@@ -1,4 +1,4 @@
-import { WeatherByDate } from "models";
+import { WeatherResponse } from "models";
 
 export const GET_DATES = "GET_DATES";
 export const SET_LOADING = "SET_LOADING";
@@ -20,12 +20,12 @@ export interface SearchLocations {
   payload: string;
 }
 
-interface GetSearchLocationsSuccess {
+export interface GetSearchLocationsSuccess {
   type: typeof GET_SEARCH_LOCATIONS_SUCCESS;
-  payload: WeatherByDate[];
+  payload: WeatherResponse;
 }
 
-interface GetSearchLocationsError {
+export interface GetSearchLocationsError {
   type: typeof GET_SEARCH_LOCATIONS_ERROR;
   payload: string;
 }
@@ -34,4 +34,5 @@ export type HomePageTypes =
   | GetDatesAction
   | SetLoadingAction
   | GetSearchLocationsError
+  | SearchLocations
   | GetSearchLocationsSuccess;

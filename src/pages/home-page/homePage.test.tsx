@@ -1,11 +1,18 @@
-import React from 'react';
-// import { mount } from 'enzyme';
-// import { Login } from '../../login/index';
+import store from "app-redux/store";
+import { mount, shallow } from "enzyme";
+import React from "react";
+import { Provider } from "react-redux";
+import { SearchInput } from "shared-components/inputs/search-input/searchInput";
+import { DatesWeather } from "./components/dates-weather/datesWeather";
+import { HomePage } from "./homePage";
 
-describe('login page', () => {
-  it('should have Login component', () => {
-    //const subject = mount(<Login />);
+it("check elements", () => {
+  const tree = mount(
+    <Provider store={store}>
+      <HomePage />
+    </Provider>
+  );
 
-    expect([0]).toHaveLength(1);
-  });
+  expect(tree.contains(<div>hihi</div>)).toBeTruthy();
+  // expect(tree.find("button").length).toEqual(1);
 });

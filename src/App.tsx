@@ -6,11 +6,14 @@ import { HomePage } from "pages/home-page/homePage";
 
 function App() {
   return (
-    <Provider store={store}>
-      <div className="app-container">
-        <HomePage></HomePage>
-      </div>
-    </Provider>
+    <>
+      <header></header>
+      <Provider store={store}>
+        <div className="app-container">
+          <HomePage></HomePage>
+        </div>
+      </Provider>
+    </>
   );
 }
 

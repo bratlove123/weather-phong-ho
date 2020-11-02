@@ -8,7 +8,7 @@ test("renders the component", () => {
   expect(component).toMatchSnapshot();
 });
 
-test("has homepage element", () => {
-  const component = shallow(<App />);
-  expect(component).toContain(<HomePage />);
+test("app contains home page", () => {
+  const wrapper = mount(<App />);
+  expect(wrapper.contains(<HomePage></HomePage>)).toBeTruthy();
 });

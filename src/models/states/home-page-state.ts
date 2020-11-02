@@ -4,4 +4,5 @@ export interface HomePageState {
   dates: WeatherByDate[];
   isLoading: boolean;
   error: string;
+  cityId: number;
 }
