@@ -1,6 +1,8 @@
 # Weather forecase develope by Phong Ho -  NAB test
 Using openweathermap.org API
 
+![Screenshot](screenshots/forecast.png)
+
 ## Features
 - UI: 
     + Can do search to search a city with cool UI
