@@ -20,7 +20,7 @@ In the project directory, you can run:
 
 ### `yarn install`
 
-To install nessesary library.\
+To install nessesary library.
 
 ### `yarn start`
 
