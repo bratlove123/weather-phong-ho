@@ -5,7 +5,7 @@ Using openweathermap.org API
 
 ## Features
 - UI: 
-    + Can do search to search a city with cool UI
+    + Can do search weather by type a city
     + Display background color of weather base on the degree: Cold - Blue, Good - Green, Hot - Red
     + Have css placeholder
 
