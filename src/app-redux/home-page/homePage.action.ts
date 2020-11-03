@@ -10,7 +10,7 @@ interface GetDatesAction {
   type: typeof GET_DATES;
 }
 
-interface SetLoadingAction {
+export interface SetLoadingAction {
   type: typeof SET_LOADING;
   payload: boolean;
 }

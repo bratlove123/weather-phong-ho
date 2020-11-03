@@ -30,7 +30,6 @@ export const HomePage = () => {
           ></SearchInput>
         </div>
       </div>
-      <div>hihi</div>
       <div className="weather-container">
         {isLoading && <Loading />}
         {errorMessage !== "" && (
