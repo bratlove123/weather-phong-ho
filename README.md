@@ -10,13 +10,17 @@ Using openweathermap.org API
     + Have css placeholder
 
 - Coding:
-    + Config jest, babel, enzyme, typescript, redux saga
+    + Config jest, babel, enzyme, typescript, redux saga, eslint, husky
     + Using redux saga to manage state
     + Full unit test for all modules (UI & Redux)
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn install`
+
+To install nessesary library.\
 
 ### `yarn start`
 
