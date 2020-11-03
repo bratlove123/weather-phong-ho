@@ -8,7 +8,8 @@ Using openweathermap.org API
     + Have css placeholder
 
 - Coding:
-    + Using redux saga
+    + Config jest, babel, enzyme, typescript, redux saga
+    + Using redux saga to manage state
     + Full unit test for all modules (UI & Redux)
 
 ## Available Scripts
