@@ -13,6 +13,7 @@ module.exports = {
     "!src/serviceWorker.ts",
     "!src/setupTests.ts",
     "!src/index.tsx",
+    "!src/reportWebVitals.tsx",
   ],
   setupFiles: ["./config/jest/setupJest.ts", "./config/jest/setupEnzyme.ts"],
   coveragePathIgnorePatterns: ["./src/*/*.types.{ts,tsx}"],
