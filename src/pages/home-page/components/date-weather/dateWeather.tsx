@@ -36,8 +36,8 @@ const rgbToHex = (r: number, g: number, b: number) =>
 const colorBaseOnTemp = (temp: number) => {
   const maxTemp = 50;
   const minTemp = 0;
-  const redVal = Math.round((300 / (maxTemp - minTemp)) * (temp - minTemp));
-  const blueVal = Math.round((300 / (maxTemp - minTemp)) * (maxTemp - temp));
+  const redVal = Math.round((255 / (maxTemp - minTemp)) * (temp - minTemp));
+  const blueVal = Math.round((255 / (maxTemp - minTemp)) * (maxTemp - temp));
   const hexfrom = rgbToHex(redVal, 170, blueVal);
   const hexto = rgbToHex(redVal, 100, blueVal);
   return `linear-gradient(to bottom, ${hexfrom}, ${hexto})`;
